@@ -66,9 +66,11 @@ if sub and nome != '':
 
 		for a in att:
 			row = next_available_row(current_work)
-			c1 = Cell(int(row) , 1, str(data))
+			data_c = str(data)
+			orario_c = str(dictionary[a]).replace(':', '.')
+			c1 = Cell(int(row) , 1, data_c)
 			c2 = Cell(int(row) , 2, a)
-			c3 = Cell(int(row) , 3, str(dictionary[a]).replace(':', '.'))
+			c3 = Cell(int(row) , 3, orario_c)
 			current_work.update_cells([c1,c2,c3])
 			#current_work.update_cell(row , 1, str(data))
 			#current_work.update_cell(row , 2, a)
